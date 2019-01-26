@@ -1,20 +1,217 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<nav class=" fixed-top navbar navbar-expand-lg pt-4 pb-0 mb-0 shadowBox" >
+  <a class="navbar-brand mb-0 ml-3" (click) = "setMenuNum(0)" href="#"><span class="heading">Seby xavier</span></a>
+  <div class="container mb-0 pb-0">
+    <ul class="nav-item alignTop pb-0 mb-0" (click) = "setMenuNum(1)">
+        <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNum == 1"  [class.menu] = "!(menuNum == 1)" >Professional summary</span></a>
+        <div *ngIf = "menuNum == 1" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146)" ></div>
+    </ul>
+    <ul class="nav-item alignTop pb-0 mb-0" (click) = "setMenuNum(2)">
+        <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNum == 2"  [class.menu] = "!(menuNum == 2)">Projects</span></a>
+        <div *ngIf = "menuNum == 2" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146)" ></div>
+    </ul>
+    <ul class="nav-item alignTop pb-0 mb-0" (click) = "setMenuNum(3)">
+        <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNum == 3"  [class.menu] = "!(menuNum == 3)">Education</span></a>
+        <div *ngIf = "menuNum == 3" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146)" ></div>
+    </ul>
+    <ul class="nav-item alignTop pb-0 mb-0" (click) = "setMenuNum(4)">
+        <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNum == 4"  [class.menu] = "!(menuNum == 4)">About me </span></a>
+        <div *ngIf = "menuNum == 4" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146)" ></div>
+    </ul>
+    <ul class="nav-item alignTop pb-0 mb-0" (click) = "setMenuNum(5)">
+        <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNum == 5"  [class.menu] = "!(menuNum == 5)">Contact</span></a>
+        <div *ngIf = "menuNum == 5" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146);" ></div>
+    </ul>
+  </div>
+</nav>
+<div class="contentDiv"style="height: 1000px;" >
+  <div class="container" >
+    <div id="Professional" class="row menuDivSpacing">
+      <div class="col-md-6 display-2 ml-0 mr-0 pl-0 pr-0">
+        <div class="d-flex flex-column " style="height: 100%;">
+          <div style="height: 60%;" class="prof">
+          </div>
+          <div style="align-self: center;">
+            Developer
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+          <p>
+            I am fascinated with technology and innovation, and have always believed that the only advancement for 
+            any civilization (or for that matter, any company) is through advancing its technology. And I have 
+            pledged to myself that I should be a part of making this happen. And so, am ready to take up any 
+            technical challenge and look through the end of it no matter what it takes, even if it requires 
+            learning something completely new and out of my zone. 
+          </p>
+          <p>
+            My Main goal is to persevere and build a 
+            conducive atmosphere for innovation and creativity which would positively mark a growth toward 
+            success for myself and the organization.
+          </p>
+      </div>
+    </div>
+  </div>
+  <div id="Projects" class="menuDivSpacing">
+      <div id="demo" class="carousel slide" style="color: white" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+      
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="projectCards">
+                <div class="row" style="height: 100%">
+                  <div class="col-md-4 ">
+                    <div class = "rights"></div>
+                  </div>
+                  <div class="col-md-8 ">
+                    <div class = "cardTitle">
+                      RIGHTS
+                    </div> 
+                    <div class = "cardDesc" style="margin-top: 50px">
+                      <p>RIGHTS is abbreviated as 'Rights Information Gathering Handling And Tracking System'.
+                         It's a project, internal to TCS, which is the way, accesses, to resources (which are doors, software, etc) are managed.
+                      </p>
+                      <p>
+                      Have worked on Oracle for the backend database, and java frameworks such as Spring and Hibernate.
+                      Achieved efficiency and reduced redundancy by automating repeatable tasks by using technologies like R and python. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="projectCards">
+              <div class="row" style="height: 100%">
+                <div class="col-md-4 ">
+                  <div class = "insights"></div>
+                </div>
+                <div class="col-md-8 ">
+                  <div class = "cardTitle">
+                    Insights
+                  </div> 
+                  <div class = "cardDesc" style="margin-top: 50px ; font-size: 20px;">
+                    <p>
+                      Insights was a reporting application, which, as the name suggests, provides insights into 'RIGHTS'.
+                      Its had various kinds of reports, which would further increase the usability of RIGHTS.
+                    </p>
+                    <p>
+                      Have worked on PostgreSQL for the backend database, and server side technologies like Java server Faces couples with Jsp to render web interfaces.
+                      Have integrated Reporting technologies like eclipse BIRT with the Java server Faces server technology for providing seamless web reporting services.
+                      Have contributed in the up gradation activity of server to Jboss 7 , by conducting POCs to test and verify backward compatibility .
+                      Upgraded and have worked on Angular 6 and spring boot.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="projectCards">
+                <div class="row" style="height: 100%">
+                  <div class="col-md-4 ">
+                    <div class = "remember"></div>
+                  </div>
+                  <div class="col-md-8 ">
+                    <div class = "cardTitle">
+                      Remember
+                    </div> 
+                    <div class = "cardDesc" style="margin-top: 50px">
+                      <p>Remember was a personal project which is basically a social networking application.
+                      </p>
+                      <p>
+                        Built it by using MySQL for the backend database.
+                        Angular 6 with stompjs for WebSockets.
+                        Spring and hibernate for the serverside, along with Json Web Token for security, 
+                        Restful services from client to server and WebSocketMessageBroker of Spring.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      
+      </div>
+  </div>
+  <div id="Education" class="menuDivSpacing">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card" style="width:400px">
+          <img style="height: 300px; width: 300px;align-self: center" class="card-img-top" src="./assets/engineering.png" alt="Card image">
+          <div class="card-body">
+            <h3 class="card-title">Bachelor of Engineering</h3>
+            <p class="card-text">M.V.G.R. College Of Engineering J.N.T.U, Kakinada 
+                <br>Bachelor of Information Technology 
+                <br>Secured 68%  
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width:400px ; height: 100%;">
+          <img style="margin-top: 32px;margin-bottom: 67px ;height: 200px; width: 250px ;align-self: center" class="card-img-top" src="./assets/intermediate2.png" alt="Card image">
+          <div class="card-body">
+            <h3 class="card-title">Intermediate Education</h3>
+            <p class="card-text">Sri Chaitanya  Jr. College 
+                <br>MPC (Math , Physics , Chemistry)
+                <br>Secured 83.6%
+            </p>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width:400px ; height: 100%">
+            <img style="margin-top: 30px;margin-bottom: 67px ;height: 200px; width: 300px;align-self: center" class="card-img-top" src="./assets/school.png" alt="Card image">
+            <div class="card-body">
+              <h3 class="card-title">Schooling</h3>
+              <p class="card-text">Kotak Salesian School
+                  <br>ICSE (Indian Certificate of Secondary Education)
+                  <br>Secured 75.85%   
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div id="About" class="container menuDivSpacing cardDesc " >
+    <div class="bullet" style="float: left;"></div>
+        Have an interest in explaining things in a much simpler way.
+         Especially, when conversing with the clients, about functionality and technicalities.
+    <br>
+    <div class="bullet" style="float: left;"></div>
+        I love to keep myself challenged by trying to implement new ideas.
+         Have a great interest in Machine learning Algorithms, and am in the process of implementing them.
+    <br>
+    <div class="bullet" style="float: left;"></div>
+          Always attentive to the technological shifts happening of late, by try to view as many keynotes and conferences.
+           Also try to understand them at a high level.
+    <br>
+    <div class="bullet" style="float: left;"></div>
+          Have a quick learning mind set.
+          With this mind set I have managed to learn music theory and the guitar, and various other computer technologies.
+  </div>
+  <div id="Contact" class="menuDivSpacing container" style="font-size: 17px">
+      <div class="git"></div>
+      <a href="https://github.com/seby19" style="margin-left: 10px" target="_blank" > https://github.com/seby19</a>
+      <br><br>
+      <div class="call"></div> <span style="margin-left: 10px">7030190101 / 8885214028 </span>
+      <br><br>
+      <div class="mail"></div> <span style="margin-left: 10px">sebyxavier19@gmail.com</span>
+  </div>
+</div>

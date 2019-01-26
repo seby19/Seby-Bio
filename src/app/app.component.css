@@ -1,0 +1,111 @@
+.heading{
+    color: #4e5052;
+    font-size: 60px;
+}
+.menu{
+    color: #484b4d;
+    font-size: 17px;
+}
+.menuHighlighted{
+    color: rgb(4, 114, 72);
+    font-size: 17px;
+}
+.alignTop{
+    margin-top: 43px
+}
+.menu:hover{
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+}
+.contentDiv{
+    color: #3c3e3f;
+    margin-top: 200px;
+}
+#Professional{
+    font-size: 22px;
+}
+.shadowBox{
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.12),inset 0 -1px 0 0 #dadce0;
+    background-color: white;
+}
+.prof{
+    background-image: url('../assets/sf1.svg');
+    background-size: 550px;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(77, 67, 67);
+}
+.projectCards{    
+    background-color: rgb(3, 141, 196);
+    height: 500px;
+}
+.menuDivSpacing{
+    margin-bottom: 130px;
+}
+.cardTitle{
+    
+    text-align: center;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    margin-top: 15px;
+}
+.cardDesc{
+    font-size: 22px;
+        
+}
+.rights{
+    background-image: url('../assets/rights.png');
+    background-size: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+.insights{
+    background-image: url('../assets/insights4.png');
+    background-size: 450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+.remember{
+    background-image: url('../assets/remember3.png');
+    background-size: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+.bullet{
+    background-image: url('../assets/bullet.jpg');
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+}
+.git{
+    background-image: url('../assets/git.png');
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    float: left;
+}
+.call{
+    background-image: url('../assets/call.png');
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    float: left;
+}
+.mail{
+    background-image: url('../assets/mail.png');
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    float: left;
+}
