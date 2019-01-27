@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { trigger,state,style,animate,transition, animation} from '@angular/animations';
 
 @Component({
@@ -69,27 +69,96 @@ import { trigger,state,style,animate,transition, animation} from '@angular/anima
   ]
 })
 export class AppComponent implements OnInit{
-  menuNum = 1;
+  menuNumOld = 1;
+  menuNumNew = 1;
+  totalSeconds: number;
   Professional;
+  pagey = 0;
+  pageEventDone = false;
+  timer = null
   ngOnInit() {
-    this.menuNum = 1;
+
+    this.totalSeconds = 1;
+    this.menuNumOld = 1;
+    this.menuNumNew = 1;
+    this.pagey = 0;
+    this.pageEventDone = false;
+    this.timer = setInterval(this.setTime, 90);
+  }
+  setTime =  () => {
+    ++this.totalSeconds;
+    //console.log(this.totalSeconds);
+    if(this.totalSeconds == 1) {
+      this.pageEventDone = false
+      console.log("set to false");
+    }
   }
   setMenuNum(number) {
-    this.menuNum = number;
-    if(this.menuNum == 1) {
+    //clearInterval(this.timer);
+    this.menuNumNew = number;
+    if(this.menuNumNew == 1) {
       window.scrollTo(0,0);
     }
-    else if(this.menuNum == 2) {
+    else if(this.menuNumNew == 2) {
       document.getElementById('scrollToProjects').scrollIntoView(true);
     }
-    else if(this.menuNum == 3) {
+    else if(this.menuNumNew == 3) {
       document.getElementById('scrollToEducation').scrollIntoView(true);
     }
-    else if(this.menuNum == 4) {
+    else if(this.menuNumNew == 4) {
       document.getElementById('scrollToAbout').scrollIntoView(true);
     }
-    else if(this.menuNum == 5) {
+    else if(this.menuNumNew == 5) {
       document.getElementById('scrollToContact').scrollIntoView(true);
     }
   }
+  
+	@HostListener('window:scroll', ['$event']) onScrollEvent(event){
+    let a = document.getElementById('Prof');
+    let b = document.getElementById('Projects');
+    let c = document.getElementById('Education');
+    let d = document.getElementById('About');
+    let e = document.getElementById('Contact');
+    this.inViewPort(a , 1 , event);
+    this.inViewPort(b , 2 , event);
+    this.inViewPort(c , 3 , event);
+    this.inViewPort(d , 4 , event);
+    this.inViewPort(e , 5 , event);
+
+  } 
+  inViewPort(elem , menuNum , event) {
+    //var bounding = elem.getBoundingClientRect();
+    //console.log(event);
+    //console.log(event.pageY);
+    this.totalSeconds = 0;
+    clearInterval(this.timer);
+    if(this.menuNumOld == this.menuNumNew)
+    {
+      if( event.pageY > this.pagey && this.menuNumOld < 5 && !this.pageEventDone )
+      {
+        this.setMenuNum(this.menuNumOld + 1);
+      }
+      else if (event.pageY < this.pagey && this.menuNumOld > 1 && !this.pageEventDone)
+      {
+        this.setMenuNum(this.menuNumOld - 1);
+      }
+      this.pagey = event.pageY;
+    } else {
+      this.menuNumOld = this.menuNumNew;
+    }
+    this.pageEventDone = true;
+    this.timer = setInterval(this.setTime, 90);
+    // if (
+    //     bounding.top >= 0 &&
+    //     bounding.left >= 0 &&
+    //     bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    //     bounding.right <= (window.innerWidth || document.documentElement.clientWidth) 
+    //   ) {
+    //     elem.style.opacity = "1"
+    // }
+    // else {
+    //   elem.style.opacity = "0"
+    // }
+  }
+	
 }

@@ -2,31 +2,31 @@
   <a class="navbar-brand mb-0 ml-3" (click) = "setMenuNum(1)" href="#"><span class="heading">Seby xavier</span></a>
   <div class="container mb-0 pb-0">
     <ul class="nav-item alignTop pb-0 mb-0" (click) = "setMenuNum(1)">
-        <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNum == 1"  [class.menu] = "!(menuNum == 1)" >Professional summary</span></a>
-        <div *ngIf = "menuNum == 1" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146)" ></div>
+        <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNumNew == 1"  [class.menu] = "!(menuNumNew == 1)" >Professional summary</span></a>
+        <div *ngIf = "menuNumNew == 1" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146)" ></div>
     </ul>
     <ul class="nav-item alignTop pb-0 mb-0" (click) = "setMenuNum(2)">
-        <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNum == 2"  [class.menu] = "!(menuNum == 2)">Projects</span></a>
-        <div *ngIf = "menuNum == 2" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146)" ></div>
+        <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNumNew == 2"  [class.menu] = "!(menuNumNew == 2)">Projects</span></a>
+        <div *ngIf = "menuNumNew == 2" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146)" ></div>
     </ul>
     <ul class="nav-item alignTop pb-0 mb-0" (click) = "setMenuNum(3)">
-        <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNum == 3"  [class.menu] = "!(menuNum == 3)">Education</span></a>
-        <div *ngIf = "menuNum == 3" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146)" ></div>
+        <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNumNew == 3"  [class.menu] = "!(menuNumNew == 3)">Education</span></a>
+        <div *ngIf = "menuNumNew == 3" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146)" ></div>
     </ul>
     <ul class="nav-item alignTop pb-0 mb-0" (click) = "setMenuNum(4)">
-        <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNum == 4"  [class.menu] = "!(menuNum == 4)">About me </span></a>
-        <div *ngIf = "menuNum == 4" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146)" ></div>
+        <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNumNew == 4"  [class.menu] = "!(menuNumNew == 4)">About me </span></a>
+        <div *ngIf = "menuNumNew == 4" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146)" ></div>
     </ul>
     <ul class="nav-item alignTop pb-0 mb-0" (click) = "setMenuNum(5)">
-        <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNum == 5"  [class.menu] = "!(menuNum == 5)">Contact</span></a>
-        <div *ngIf = "menuNum == 5" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146);" ></div>
+        <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNumNew == 5"  [class.menu] = "!(menuNumNew == 5)">Contact</span></a>
+        <div *ngIf = "menuNumNew == 5" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146);" ></div>
     </ul>
   </div>
 </nav>
 
 <div class="contentDiv"style="height: 1000px;" >
-  <div class="container" >
-    <div [@changeMenuNum1] ="menuNum" id="Professional" class="row">
+  <div class="container">
+    <div [@changeMenuNum1] ="menuNumNew" id="Professional" class="row">
       <div class="col-md-6 display-2 ml-0 mr-0 pl-0 pr-0">
         <div class="d-flex flex-column " style="height: 100%;">
           <div style="height: 60%;" class="prof">
@@ -64,7 +64,7 @@
         </ul>
       
         <!-- The slideshow -->
-        <div class="carousel-inner opacityAnimate" [@changeMenuNum2] ="menuNum">
+        <div class="carousel-inner opacityAnimate" [@changeMenuNum2] ="menuNumNew">
           <div class="carousel-item active">
             <div class="projectCards">
                 <div class="row" style="height: 100%">
@@ -91,10 +91,10 @@
           <div class="carousel-item">
             <div class="projectCards">
               <div class="row" style="height: 100%">
-                <div class="col-md-4 ">
+                <div class="col-md-3 ">
                   <div class = "insights"></div>
                 </div>
-                <div class="col-md-8 ">
+                <div class="col-md-9 ">
                   <div class = "cardTitle">
                     Insights
                   </div> 
@@ -105,7 +105,7 @@
                     </p>
                     <p>
                       Have worked on PostgreSQL for the backend database, and server side technologies like Java server Faces couples with Jsp to render web interfaces.
-                      Have integrated Reporting technologies like eclipse BIRT with the Java server Faces server technology for providing seamless web reporting services.
+                      Have integrated Reporting technologies like eclipse BIRT with Java server Faces server technology for providing seamless web reporting services.
                       Have contributed in the up gradation activity of server to Jboss 7 , by conducting POCs to test and verify backward compatibility .
                       Upgraded and have worked on Angular 6 and spring boot.
                     </p>
@@ -151,7 +151,7 @@
       </div>
   </div>
   <div id="scrollToEducation" class="menuDivSpacing"></div>
-  <div [@changeMenuNum3] ="menuNum" id="Education" class="opacityAnimate">
+  <div [@changeMenuNum3] ="menuNumNew" id="Education" class="opacityAnimate">
     <div class="row">
       <div class="col-md-4">
         <div class="card" style="width:400px">
@@ -192,7 +192,7 @@
     </div>
   </div>
   <div id="scrollToAbout" class="menuDivSpacing"></div>
-  <div [@changeMenuNum4] ="menuNum" id="About" class="opacityAnimate container cardDesc " >
+  <div [@changeMenuNum4] ="menuNumNew" id="About" class="opacityAnimate container cardDesc " >
     
     <div class="bullet" style="float: left;"></div>
         Have an interest in explaining things in a much simpler way.
@@ -215,12 +215,18 @@
     <br>
   </div>
   <div id="scrollToContact" class="menuDivSpacing"></div>
-  <div [@changeMenuNum5] ="menuNum" id="Contact" class="opacityAnimate container" style="font-size: 17px">
-      <div class="git"></div>
+  <div [@changeMenuNum5] ="menuNumNew" id="Contact" class="row opacityAnimate container" style="font-size: 17px">
+      <div class="col" style="margin-left: 20% ; margin-bottom: 20px">
+      <div class="git " ></div>
       <a href="https://github.com/seby19" style="margin-left: 10px" target="_blank" > https://github.com/seby19</a>
+      </div>
       <br><br>
-      <div class="call"></div> <span style="margin-left: 10px">7030190101 / 8885214028 </span>
+      <div  class="col">
+      <div class="call "></div> <span style="margin-left: 10px">7030190101 / 8885214028 </span>
+      </div>
       <br><br>
+      <div  class="col">
       <div class="mail"></div> <span style="margin-left: 10px">sebyxavier19@gmail.com</span>
+      </div>
   </div>
 </div>
