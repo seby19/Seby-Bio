@@ -4,7 +4,7 @@ const path = require('path');
 const app =express()
 app.use(express.static('./dist/portfolio'));
 app.get('/*',(req , res) =>{
-    res.sendFile(path.join(__dirname ,'/dist/portfolio/index.html'));
+    res.sendFile(path.join('/dist/portfolio/index.html'));
 });
 
 app.listen(process.env.PORT || 8080 , () =>
