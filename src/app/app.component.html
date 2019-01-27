@@ -1,6 +1,5 @@
-
 <nav class=" fixed-top navbar navbar-expand-lg pt-4 pb-0 mb-0 shadowBox" >
-  <a class="navbar-brand mb-0 ml-3" (click) = "setMenuNum(0)" href="#"><span class="heading">Seby xavier</span></a>
+  <a class="navbar-brand mb-0 ml-3" (click) = "setMenuNum(1)" href="#"><span class="heading">Seby xavier</span></a>
   <div class="container mb-0 pb-0">
     <ul class="nav-item alignTop pb-0 mb-0" (click) = "setMenuNum(1)">
         <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNum == 1"  [class.menu] = "!(menuNum == 1)" >Professional summary</span></a>
@@ -24,9 +23,10 @@
     </ul>
   </div>
 </nav>
+
 <div class="contentDiv"style="height: 1000px;" >
   <div class="container" >
-    <div id="Professional" class="row menuDivSpacing">
+    <div [@changeMenuNum1] ="menuNum" id="Professional" class="row">
       <div class="col-md-6 display-2 ml-0 mr-0 pl-0 pr-0">
         <div class="d-flex flex-column " style="height: 100%;">
           <div style="height: 60%;" class="prof">
@@ -52,7 +52,8 @@
       </div>
     </div>
   </div>
-  <div id="Projects" class="menuDivSpacing">
+  <div id="scrollToProjects" class="menuDivSpacing"></div>
+  <div id="Projects" >
       <div id="demo" class="carousel slide" style="color: white" data-ride="carousel">
 
         <!-- Indicators -->
@@ -63,7 +64,7 @@
         </ul>
       
         <!-- The slideshow -->
-        <div class="carousel-inner">
+        <div class="carousel-inner opacityAnimate" [@changeMenuNum2] ="menuNum">
           <div class="carousel-item active">
             <div class="projectCards">
                 <div class="row" style="height: 100%">
@@ -149,7 +150,8 @@
       
       </div>
   </div>
-  <div id="Education" class="menuDivSpacing">
+  <div id="scrollToEducation" class="menuDivSpacing"></div>
+  <div [@changeMenuNum3] ="menuNum" id="Education" class="opacityAnimate">
     <div class="row">
       <div class="col-md-4">
         <div class="card" style="width:400px">
@@ -189,7 +191,9 @@
         </div>
     </div>
   </div>
-  <div id="About" class="container menuDivSpacing cardDesc " >
+  <div id="scrollToAbout" class="menuDivSpacing"></div>
+  <div [@changeMenuNum4] ="menuNum" id="About" class="opacityAnimate container cardDesc " >
+    
     <div class="bullet" style="float: left;"></div>
         Have an interest in explaining things in a much simpler way.
          Especially, when conversing with the clients, about functionality and technicalities.
@@ -205,8 +209,13 @@
     <div class="bullet" style="float: left;"></div>
           Have a quick learning mind set.
           With this mind set I have managed to learn music theory and the guitar, and various other computer technologies.
+    <br>
+    <div class="bullet" style="float: left;"></div>
+          Started working in Tata counsultancy services from August 2016 till date.
+    <br>
   </div>
-  <div id="Contact" class="menuDivSpacing container" style="font-size: 17px">
+  <div id="scrollToContact" class="menuDivSpacing"></div>
+  <div [@changeMenuNum5] ="menuNum" id="Contact" class="opacityAnimate container" style="font-size: 17px">
       <div class="git"></div>
       <a href="https://github.com/seby19" style="margin-left: 10px" target="_blank" > https://github.com/seby19</a>
       <br><br>
