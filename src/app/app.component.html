@@ -1,4 +1,4 @@
-<nav *ngIf = hidingFunc() class=" fixed-top navbar navbar-expand-lg pt-4 pb-0 mb-0 shadowBox" >
+<nav *ngIf = hidingFunc2() class=" fixed-top navbar navbar-expand-lg pt-4 pb-0 mb-0 shadowBox" >
   <a class="navbar-brand mb-0 ml-3" (click) = "setMenuNum(1)" href="#"><span class="heading">Seby Xavier</span></a>
   <div class="container mb-0 pb-0">
     <ul class="nav-item alignTop pb-0 mb-0" (click) = "setMenuNum(1)">
@@ -28,17 +28,17 @@
   <div class="contentDiv"style="height: 1000px;" >
     <div class="container">
       <div [@changeMenuNum1] ="menuNumNew" id="Professional" class="row">
-        <div class="col-md-6 display-2 ml-0 mr-0 pl-0 pr-0">
+        <div class="col-md-6 ml-0 mr-0 pl-0 pr-0">
           <div class="d-flex flex-column " style="height: 100%;">
-            <div style="height: 60%;" class="prof">
+            <div class="prof">
             </div>
-            <div style="align-self: center;">
+            <div style="align-self: center;" class = "developer">
               Developer
             </div>
           </div>
         </div>
         <div class="col-md-6">
-            <p [class.checkHeadings] = !hidingFunc() >
+            <p  >
               I am fascinated with technology and innovation and have always believed that the only advancement for 
               any civilization (or any company) is through advancing its technology. I have 
               pledged to myself that I should be a part of making this happen. And so, am ready to take up any 
@@ -99,7 +99,7 @@
                     <div class = "cardTitle">
                       Insights
                     </div> 
-                    <div class = "cardDesc" style="margin-top: 50px ; font-size: 20px;">
+                    <div class = "cardDesc" style="margin-top: 50px ;">
                       <p>
                         Insights was a reporting application, which, as the name suggests, provides insights into 'RIGHTS'.
                         Its had various kinds of reports, which would further increase the usability of RIGHTS.
@@ -154,36 +154,36 @@
     <div id="scrollToEducation" class="menuDivSpacing"></div>
     <div [@changeMenuNum3] ="menuNumNew" id="Education" class="opacityAnimate">
       <div class="row">
-        <div class="col-md-4">
-          <div class="card" style="width:400px">
-            <img style="height: 300px; width: 300px;align-self: center" class="card-img-top" src="./assets/engineering.png" alt="Card image">
+        <div class="col-lg-4 col-md-3">
+          <div class="card engCard">
+            <img class="card-img-top engineering" src="./assets/engineering.png" alt="Card image">
             <div class="card-body">
-              <h3 class="card-title">Bachelor of Engineering</h3>
-              <p class="card-text">M.V.G.R. College Of Engineering J.N.T.U, Kakinada 
+              <span class="card-title eduTitles">Bachelor of Engineering</span>
+              <p class="card-text eduText">M.V.G.R. College Of Engineering J.N.T.U, Kakinada 
                   <br>Bachelor of Information Technology 
                   <br>Secured 68%  
               </p>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card" style="width:400px ; height: 100%;">
-            <img style="margin-top: 32px;margin-bottom: 67px ;height: 200px; width: 250px ;align-self: center" class="card-img-top" src="./assets/intermediate2.png" alt="Card image">
+        <div class="col-lg-4 col-md-3">
+          <div class="card interCard">
+            <img class="card-img-top intermediate" src="./assets/intermediate2.png" alt="Card image">
             <div class="card-body">
-              <h3 class="card-title">Intermediate Education</h3>
-              <p class="card-text">Sri Chaitanya  Jr. College 
+              <span class="card-title eduTitles">Intermediate Education</span>
+              <p class="card-text eduText">Sri Chaitanya  Jr. College 
                   <br>MPC (Math , Physics , Chemistry)
                   <br>Secured 83.6%
               </p>
             </div>
           </div>
           </div>
-          <div class="col-md-4">
-            <div class="card" style="width:400px ; height: 100%">
-              <img style="margin-top: 30px;margin-bottom: 67px ;height: 200px; width: 300px;align-self: center" class="card-img-top" src="./assets/school.png" alt="Card image">
+          <div class="col-lg-4 col-md-3">
+            <div class="card schoolCard" >
+              <img class="card-img-top school" src="./assets/school.png" alt="Card image">
               <div class="card-body">
-                <h3 class="card-title">Schooling</h3>
-                <p class="card-text">Kotak Salesian School
+                <span class="card-title eduTitles">Schooling</span>
+                <p class="card-text eduText">Kotak Salesian School
                     <br>ICSE (Indian Certificate of Secondary Education)
                     <br>Secured 75.85%   
                 </p>
@@ -192,8 +192,8 @@
           </div>
       </div>
     </div>
-    <div id="scrollToAbout" class="menuDivSpacing"></div>
-    <div [@changeMenuNum4] ="menuNumNew" id="About" class="opacityAnimate container cardDesc " >
+    <div id="scrollToAbout" class="menuDivSpacing" style="align-content: center"></div>
+    <div [@changeMenuNum4] ="menuNumNew" id="About" class="opacityAnimate container cardDesc2 " >
       
       <div class="bullet" style="float: left;"></div>
           Have an interest in explaining things in a much simpler way.
@@ -216,18 +216,18 @@
       <br>
     </div>
     <div id="scrollToContact" class="menuDivSpacing"></div>
-    <div [@changeMenuNum5] ="menuNumNew" id="Contact" class="row opacityAnimate container" style="font-size: 17px">
+    <div [@changeMenuNum5] ="menuNumNew" id="Contact" class="row opacityAnimate container contactDtls" >
         <div class="col" style="margin-left: 20% ; margin-bottom: 20px">
         <div class="git " ></div>
-        <a href="https://github.com/seby19" style="margin-left: 10px" target="_blank" > https://github.com/seby19</a>
+        <a href="https://github.com/seby19" class="cntcLftMrgn" target="_blank" > https://github.com/seby19</a>
         </div>
         <br><br>
         <div  class="col">
-        <div class="call "></div> <span style="margin-left: 10px">7030190101 / 8885214028 </span>
+        <div class="call "></div> <span class="cntcLftMrgn">7030190101 / 8885214028 </span>
         </div>
         <br><br>
         <div  class="col">
-        <div class="mail"></div> <span style="margin-left: 10px">sebyxavier19@gmail.com</span>
+        <div class="mail"></div> <span class="cntcLftMrgn">sebyxavier19@gmail.com</span>
         </div>
     </div>
   </div>

@@ -21,100 +21,695 @@
     color: #3c3e3f;
     margin-top: 200px;
 }
-#Professional{
-    opacity: 0;
-    font-size: 22px;
-}
-.opacityAnimate{
-    opacity: 0;
-}
+
 
 .shadowBox{
     box-shadow: 0 2px 6px 0 rgba(0,0,0,0.12),inset 0 -1px 0 0 #dadce0;
     background-color: white;
 }
-.prof{
-    background-image: url('../assets/sf1.svg');
-    background-size: 550px;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: rgb(77, 67, 67);
-}
-.projectCards{    
-    background-color: rgb(3, 141, 196);
-    height: 500px;
-}
-.menuDivSpacing{
-    margin-bottom: 130px;
-}
-.cardTitle{
+@media (min-width: 1001px) {
+
+    .cntcLftMrgn{
+        margin-left: 10px;
+    }
     
-    text-align: center;
-    font-size: 40px;
-    color: rgb(255, 255, 255);
-    margin-top: 15px;
-}
-.cardDesc{
-    font-size: 22px;
+    .opacityAnimate{
+        opacity: 0;
+    }
+    
+    .developer{
+        font-size: 100px;
+    }
+    #Professional{
+        opacity: 0;
+        font-size: 22px;
+    }
+    .prof{
+        height: 60%;
+        background-image: url('../assets/sf1.svg');
+        background-size: 550px;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: rgb(77, 67, 67);
+    }
+    .menuDivSpacing{
+        margin-bottom: 130px;
+    }
+    
+    .cardTitle{
         
+        text-align: center;
+        font-size: 40px;
+        color: rgb(255, 255, 255);
+        margin-top: 15px;
+    }
+    
+    .cardDesc{
+        font-size: 22px;     
+    }
+
+    .cardDesc2{
+        font-size: 22px;     
+    }
+    .rights{
+        background-image: url('../assets/rights.png');
+        background-size: 300px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    .insights{
+        background-image: url('../assets/insights4.png');
+        background-size: 450px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    
+    .remember{
+        background-image: url('../assets/remember3.png');
+        background-size: 300px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    .projectCards{    
+        background-color: rgb(3, 141, 196);
+        height: 500px;
+    }
+
+    .engineering{
+        height: 300px;
+        width: 300px;
+        align-self: center
+    }
+
+    .intermediate{
+        margin-top: 32px
+        ;margin-bottom: 67px ;
+        height: 200px; 
+        width: 250px ;
+        align-self: center
+    }
+    .school{
+        margin-top: 30px;
+        margin-bottom: 67px ;
+        height: 200px; 
+        width: 300px;
+        align-self: center
+    }
+    .eduTitles{
+        font-size: 22px;
+    }
+
+    .eduText{
+        font-size: 18px;
+    }
+
+    .engCard{
+        width:400px;
+    }
+    .interCard{
+        width:400px;
+        height: 100%;
+    }
+    .schoolCard{
+        width:400px ;
+        height: 100%
+    }
+    
+
+    .bullet{
+        background-image: url('../assets/bullet.jpg');
+        background-size: 40px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 40px;
+        width: 40px;
+    }
+
+        
+
+    .git{
+        background-image: url('../assets/git.png');
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 30px;
+        float: left;
+    }
+    .call{
+        background-image: url('../assets/call.png');
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 30px;
+        float: left;
+    }
+    .mail{
+        background-image: url('../assets/mail.png');
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 30px;
+        float: left;
+    }
+
+    .contactDtls{
+        font-size: 17px
+    }
+
+
 }
-.rights{
-    background-image: url('../assets/rights.png');
-    background-size: 300px;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
+@media (max-width: 1000px) and (min-width: 771px) {
+
+    .cntcLftMrgn{
+        margin-left: 8px;
+    }
+
+    .opacityAnimate{
+        opacity: 1;
+    }
+    
+    .developer{
+        font-size: 60px;
+    }
+    #Professional{
+        opacity: 1;
+        font-size: 18px;
+    }
+    .prof{
+        height: 60%;
+        background-image: url('../assets/sf1.svg');
+        background-size: 200px;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: rgb(77, 67, 67);
+    }
+    .menuDivSpacing{
+        margin-bottom: 90px;
+    }
+    
+    .cardTitle{
+        
+        text-align: center;
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+        margin-top: 10px;
+    }
+    
+    .cardDesc{
+        font-size: 18px;     
+        text-align: left;
+        margin-left: 2px;
+        margin-right: 2px; 
+    }
+
+
+    .cardDesc2{
+        font-size: 18px;     
+        text-align: left;
+        margin-left: 2px;
+        margin-right: 2px; 
+    }
+
+    .rights{
+        background-image: url('../assets/rights.png');
+        background-size: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    .insights{
+        background-image: url('../assets/insights4.png');
+        background-size: 150px;
+        margin-top: 10px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+        
+    .remember{
+        background-image: url('../assets/remember3.png');
+        background-size: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    .projectCards{    
+        background-color: rgb(3, 141, 196);
+        height: 400px;
+    }
+
+    .engineering{
+        height: 200px;
+        width: 200px;
+        align-self: center
+    }
+
+    .intermediate{
+        margin-top: 32px
+        ;margin-bottom: 67px ;
+        height: 110px; 
+        width: 145px ;
+        align-self: center
+    }
+    .school{
+        margin-top: 30px;
+        margin-bottom: 67px ;
+        height: 125px; 
+        width: 200px;
+        align-self: center
+    }
+
+    .eduTitles{
+        font-size: 20px;
+    }
+
+    .eduText{
+        font-size: 15px;
+    }
+
+    .engCard{
+        width:200px;
+        height: 100%;
+    }
+    .interCard{
+        width:200px;
+        height: 100%;
+    }
+    .schoolCard{
+        width:200px ;
+        height: 100%
+    }
+    
+
+    .bullet{
+        background-image: url('../assets/bullet.jpg');
+        background-size: 40px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 40px;
+        width: 40px;
+    }
+
+    
+
+    .git{
+        background-image: url('../assets/git.png');
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 30px;
+        float: left;
+    }
+    .call{
+        background-image: url('../assets/call.png');
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 30px;
+        float: left;
+    }
+    .mail{
+        background-image: url('../assets/mail.png');
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 30px;
+        float: left;
+    }
+
+    .contactDtls{
+        font-size: 15px
+    }
+
 }
-.insights{
-    background-image: url('../assets/insights4.png');
-    background-size: 450px;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-}
-.remember{
-    background-image: url('../assets/remember3.png');
-    background-size: 300px;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-}
-.bullet{
-    background-image: url('../assets/bullet.jpg');
-    background-size: 40px;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 40px;
-}
-.git{
-    background-image: url('../assets/git.png');
-    background-size: 30px;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 30px;
-    width: 30px;
-    float: left;
-}
-.call{
-    background-image: url('../assets/call.png');
-    background-size: 30px;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 30px;
-    width: 30px;
-    float: left;
-}
-.mail{
-    background-image: url('../assets/mail.png');
-    background-size: 30px;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 30px;
-    width: 30px;
-    float: left;
+@media (max-width: 770px) and (min-width :300px){
+
+    .cntcLftMrgn{
+        margin-left: 6px;
+    }
+
+    .opacityAnimate{
+        opacity: 1;
+    }    
+
+    .developer{
+        font-size: 60px;
+    }
+    #Professional{
+        opacity: 1;
+        font-size: 15px;
+    }
+    .prof{
+        height: 60%;
+        background-image: url('../assets/sf1.svg');
+        background-size: 200px;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: rgb(77, 67, 67);
+    }
+    .menuDivSpacing{
+        margin-bottom: 90px;
+    }
+    
+    .cardTitle{
+        
+        text-align: center;
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+        margin-top: 10px;
+    }
+    
+    .cardDesc{
+        font-size: 15px;     
+        text-align: center;
+        margin-left: 2px;
+        margin-right: 2px; 
+    }
+
+    .cardDesc2{
+        font-size: 15px;     
+        text-align: left;
+        margin-left: 2px;
+        margin-right: 2px; 
+    }
+
+    .rights{
+        background-image: url('../assets/rights.png');
+        background-size: 70px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    .insights{
+        background-image: url('../assets/insights4.png');
+        background-size: 100px;
+        margin-top: 10px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+        
+    .remember{
+        background-image: url('../assets/remember3.png');
+        background-size: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    .projectCards{    
+        background-color: rgb(3, 141, 196);
+        height: 500px;
+    }
+
+    .engineering{
+        height: 200px;
+        width: 200px;
+        align-self: center
+    }
+
+    .intermediate{
+        margin-top: 32px
+        ;margin-bottom: 67px ;
+        height: 110px; 
+        width: 145px ;
+        align-self: center
+    }
+    .school{
+        margin-top: 30px;
+        margin-bottom: 67px ;
+        height: 125px; 
+        width: 200px;
+        align-self: center
+    }
+    .eduTitles{
+        font-size: 20px;
+    }
+    .eduText{
+        font-size: 15px;
+    }
+
+    .engCard{
+        height: 100%;
+    }
+    .interCard{
+        height: 100%;
+    }
+    .schoolCard{
+        height: 100%
+    }
+    
+
+    .bullet{
+        background-image: url('../assets/bullet.jpg');
+        background-size: 35px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 35px;
+        width: 35px;
+    }
+    
+
+    .git{
+        background-image: url('../assets/git.png');
+        background-size: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 20px;
+        float: left;
+    }
+    .call{
+        background-image: url('../assets/call.png');
+        background-size: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 20px;
+        float: left;
+        margin-left: 30%;
+    }
+    .mail{
+        background-image: url('../assets/mail.png');
+        background-size: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 20px;
+        float: left;
+        margin-left: 30%;
+    }
+
+    .contactDtls{
+        font-size: 12px
+    }
+
 }
 
-.checkHeadings{
-    font-size: 15px
+
+
+@media (max-width: 299px){
+
+    .cntcLftMrgn{
+        margin-left: 6px;
+    }
+
+    .opacityAnimate{
+        opacity: 1;
+    }    
+
+    .developer{
+        font-size: 60px;
+    }
+    #Professional{
+        opacity: 1;
+        font-size: 15px;
+    }
+    .prof{
+        height: 60%;
+        background-image: url('../assets/sf1.svg');
+        background-size: 200px;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: rgb(77, 67, 67);
+    }
+    .menuDivSpacing{
+        margin-bottom: 90px;
+    }
+    
+    .cardTitle{
+        
+        text-align: center;
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+        margin-top: 10px;
+    }
+    
+    .cardDesc{
+        font-size: 15px;     
+        text-align: center;
+        margin-left: 2px;
+        margin-right: 2px; 
+    }
+
+    .cardDesc2{
+        font-size: 15px;     
+        text-align: center;
+        margin-left: 2px;
+        margin-right: 2px; 
+    }
+
+    .rights{
+        background-image: url('../assets/rights.png');
+        background-size: 70px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    .insights{
+        background-image: url('../assets/insights4.png');
+        background-size: 100px;
+        margin-top: 10px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+        
+    .remember{
+        background-image: url('../assets/remember3.png');
+        background-size: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    .projectCards{    
+        background-color: rgb(3, 141, 196);
+        height: 500px;
+    }
+
+    .engineering{
+        height: 200px;
+        width: 200px;
+        align-self: center
+    }
+
+    .intermediate{
+        margin-top: 32px
+        ;margin-bottom: 67px ;
+        height: 110px; 
+        width: 145px ;
+        align-self: center
+    }
+    .school{
+        margin-top: 30px;
+        margin-bottom: 67px ;
+        height: 125px; 
+        width: 200px;
+        align-self: center
+    }
+    .eduTitles{
+        font-size: 20px;
+    }
+    .eduText{
+        font-size: 15px;
+    }
+
+    .engCard{
+        height: 100%;
+    }
+    .interCard{
+        height: 100%;
+    }
+    .schoolCard{
+        height: 100%
+    }
+    
+
+    .bullet{
+        background-image: url('../assets/bullet.jpg');
+        background-size: 35px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 35px;
+        width: 35px;
+    }
+    
+
+    .git{
+        background-image: url('../assets/git.png');
+        background-size: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 20px;
+        float: left;
+    }
+    .call{
+        background-image: url('../assets/call.png');
+        background-size: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 20px;
+        float: left;
+        margin-left: 30%;
+    }
+    .mail{
+        background-image: url('../assets/mail.png');
+        background-size: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 20px;
+        float: left;
+        margin-left: 30%;
+    }
+
+    .contactDtls{
+        font-size: 12px
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

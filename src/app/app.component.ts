@@ -76,38 +76,47 @@ export class AppComponent implements OnInit{
   pagey = 0;
   pageEventDone = false;
   timer = null
-  smallerScreen : boolean = false;
+  // smallerScreen : boolean = false;
   ngOnInit() {
-    if(window.innerWidth < 700) {
-      this.smallerScreen = true;
-    }
-    else if(window.innerWidth >= 700) {
-      this.smallerScreen = false
-    }
+    // if(window.innerWidth < 700) {
+    //   this.smallerScreen = true;
+    // }
+    // else if(window.innerWidth >= 700) {
+    //   this.smallerScreen = false
+    // }
     this.totalSeconds = 1;
     this.menuNumOld = 1;
     this.menuNumNew = 1;
     this.pagey = 0;
     this.pageEventDone = false;
     this.timer = setInterval(this.setTime, 90);
-    window.onresize = this.resizedWindow;
+    // window.onresize = this.resizedWindow;
   }
-  resizedWindow(){
-    if(window.innerWidth < 700) {
-      this.smallerScreen = true;
-      console.log(this.smallerScreen)
-    }
-    else if(window.innerWidth >= 700) {
-      console.log("In else")
-      this.smallerScreen = false;
-    }
-  }
+  // resizedWindow(){
+  //   if(window.innerWidth < 700) {
+  //     this.smallerScreen = true;
+  //     console.log(this.smallerScreen)
+  //   }
+  //   else if(window.innerWidth >= 700) {
+  //     console.log("In else")
+  //     this.smallerScreen = false;
+  //   }
+  // }
 
   hidingFunc(){
-    if(window.innerWidth < 700) {
+    if(window.innerWidth < 600) {
       return false;
     }
-    else if(window.innerWidth >= 700) {
+    else if(window.innerWidth >= 600) {
+      return true;
+    }
+  } 
+
+  hidingFunc2(){
+    if(window.innerWidth < 1000) {
+      return false;
+    }
+    else if(window.innerWidth >= 1001) {
       return true;
     }
   } 
