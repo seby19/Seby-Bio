@@ -233,47 +233,63 @@ export class AppComponent implements OnInit{
     var bounding2 = sToEdu.getBoundingClientRect();
     var bounding3 = sToAbou.getBoundingClientRect();
     var bounding4 = sToCnt.getBoundingClientRect();
-    // console.log(window.getComputedStyle(a).getPropertyValue("opacity") + " op")
 
     // console.log(bounding1.top + "bounding1")
     // console.log(bounding2.top + "bounding2")
     // console.log(bounding3.top + "bounding3")
     // console.log(bounding4.top + "bounding4")
     
-    
+    console.log(window.getComputedStyle(b).getPropertyValue("opacity") + " 2pacity")
 
 
     if (bounding1.top < 0 && bounding2.top < 0 && bounding3.top <= 0 && bounding4.top <=  window.innerHeight / 2 ) {
       this.pageEventDone = true;
       //  this.menuNumOld = 5
-      this.setMenuNum(5);
+      if(window.getComputedStyle(e).getPropertyValue("opacity") != '1')
+      {
+        this.setMenuNum(5);
+      }
       this.timer = setInterval(this.setTime, 90);
     } else if(bounding1.top < 0 && bounding2.top < 0 && bounding3.top <= window.innerHeight / 2 && bounding4.top > 0 ) {
       clearInterval(this.timer);
       this.pageEventDone = true;
       //  this.menuNumOld = 4
-      this.setMenuNum(4);
+      if(window.getComputedStyle(d).getPropertyValue("opacity") != '1')
+      {
+        this.setMenuNum(4);
+      }
       this.timer = setInterval(this.setTime, 90);
     }
     else if(bounding1.top <0 && bounding2.top <= window.innerHeight / 2 && bounding3.top > 0 && bounding4.top >= 0) {
       clearInterval(this.timer);
       this.pageEventDone = true;
       //  this.menuNumOld = 3
-      this.setMenuNum(3);
+      if(window.getComputedStyle(c).getPropertyValue("opacity") != '1')
+      {
+        this.setMenuNum(3);
+      }
       this.timer = setInterval(this.setTime, 90);
     }
     else if(bounding1.top <=window.innerHeight / 2  && bounding2.top > 0 && bounding3.top >= 0 && bounding4.top >= 0) {
       clearInterval(this.timer);
       this.pageEventDone = true;
       //  this.menuNumOld = 2
-      this.setMenuNum(2);
+      console.log("in 2")
+      console.log(window.getComputedStyle(b).getPropertyValue("opacity"))
+      if(window.getComputedStyle(b).getPropertyValue("opacity") != '1')
+      {
+        this.setMenuNum(2);
+      }
       this.timer = setInterval(this.setTime, 90);
     }
     else if(bounding1.top > 0  && bounding2.top >= 0 && bounding3.top >= 0 && bounding4.top >= 0) {
       clearInterval(this.timer);
       this.pageEventDone = true;
       //  this.menuNumOld = 1
-      this.setMenuNum(1);
+      if(window.getComputedStyle(a).getPropertyValue("opacity") != '1')
+      {
+        this.setMenuNum(1);
+      }
       // console.log("In set 1")
       this.timer = setInterval(this.setTime, 90);
     } 

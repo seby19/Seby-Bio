@@ -53,8 +53,8 @@
         </div>
       </div>
     </div>
-    <div id="scrollToProjects" class="menuDivSpacing"></div>
-    <div id="Projects" >
+    <div id="scrollToProjects"  class="menuDivSpacing"></div>
+    <div id="Projects" [@changeMenuNum2] ="menuNumNew" class="opacityAnimate" >
         <div id="demo" class="carousel slide" style="color: white" data-ride="carousel">
 
           <!-- Indicators -->
@@ -65,7 +65,8 @@
           </ul>
           
           <!-- The slideshow -->
-          <div class="carousel-inner opacityAnimate" [@changeMenuNum2] ="menuNumNew">
+          <!-- On This -->
+          <div class="carousel-inner " >  
             <div class="carousel-item active">
               <div class="projectCards">
                   <div class="row" style="height: 100%">
