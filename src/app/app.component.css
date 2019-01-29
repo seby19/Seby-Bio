@@ -194,14 +194,14 @@
     }
 
     .opacityAnimate{
-        opacity: 1;
+        opacity: 0;
     }
     
     .developer{
         font-size: 60px;
     }
     #Professional{
-        opacity: 1;
+        opacity: 0;
         font-size: 18px;
     }
     .prof{
@@ -364,14 +364,14 @@
     }
 
     .opacityAnimate{
-        opacity: 1;
+        opacity: 0;
     }    
 
     .developer{
         font-size: 60px;
     }
     #Professional{
-        opacity: 1;
+        opacity: 0;
         font-size: 15px;
     }
     .prof{
@@ -532,14 +532,14 @@
     }
 
     .opacityAnimate{
-        opacity: 1;
+        opacity: 0;
     }    
 
     .developer{
         font-size: 60px;
     }
     #Professional{
-        opacity: 1;
+        opacity: 0;
         font-size: 15px;
     }
     .prof{
