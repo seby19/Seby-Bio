@@ -1,18 +1,5 @@
-.heading{
-    color: #6a6e70;
-    font-size: 60px;
-}
-.menu{
-    color: #6a6e70;
-    font-size: 17px;
-}
-.menuHighlighted{
-    color: rgb(4, 114, 72);
-    font-size: 17px;
-}
-.alignTop{
-    margin-top: 43px
-}
+
+
 .menu:hover{
     color: rgb(39, 38, 38);
     font-size: 17px;
@@ -27,7 +14,36 @@
     box-shadow: 0 2px 6px 0 rgba(0,0,0,0.12),inset 0 -1px 0 0 #dadce0;
     background-color: white;
 }
+.shadowBox2{
+    box-shadow: 10px 10px 7px 0 rgba(0,0,0,0.15),inset 0 -1px 0 0 #dadce0;
+    background-color: white;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
 @media (min-width: 1001px) {
+
+    .menu{
+        color: #6a6e70;
+        font-size: 17px;
+    }
+    .menuHighlighted{
+        color: rgb(4, 114, 72);
+        font-size: 17px;
+    }
+
+    .contentDiv{
+        color: #6a6e70;
+        margin-top: 200px;
+    }
+
+    .alignTop{
+        margin-top: 43px
+    }
+
+    .heading{
+        color: #6a6e70;
+        font-size: 60px;
+    }
 
     .cntcLftMrgn{
         margin-left: 10px;
@@ -188,6 +204,29 @@
 
 }
 @media (max-width: 1000px) and (min-width: 771px) {
+
+    .menu{
+        color: #6a6e70;
+        font-size: 17px;
+    }
+    .menuHighlighted{
+        color: rgb(4, 114, 72);
+        font-size: 17px;
+    }
+
+    .contentDiv{
+        color: #6a6e70;
+        margin-top: 200px;
+    }
+
+    .alignTop{
+        margin-top: 10px
+    }
+
+    .heading{
+        color: #6a6e70;
+        font-size: 50px;
+    }
 
     .cntcLftMrgn{
         margin-left: 8px;
@@ -359,6 +398,30 @@
 }
 @media (max-width: 770px) and (min-width :300px){
 
+
+    .menu{
+        color: #6a6e70;
+        font-size: 15px;
+    }
+    .menuHighlighted{
+        color: rgb(4, 114, 72);
+        font-size: 15px;
+    }
+
+    .contentDiv{
+        color: #6a6e70;
+        margin-top: 100px;
+    }
+
+    .alignTop{
+        margin-top: 5px
+    }
+
+    .heading{
+        color: #6a6e70;
+        font-size: 30px;
+    }
+
     .cntcLftMrgn{
         margin-left: 6px;
     }
@@ -526,6 +589,29 @@
 
 
 @media (max-width: 299px){
+
+    .menu{
+        color: #6a6e70;
+        font-size: 15px;
+    }
+    .menuHighlighted{
+        color: rgb(4, 114, 72);
+        font-size: 15px;
+    }
+
+    .contentDiv{
+        color: #6a6e70;
+        margin-top: 100px;
+    }
+
+    .alignTop{
+        margin-top: 2px
+    }
+
+    .heading{
+        color: #6a6e70;
+        font-size: 25px;
+    }
 
     .cntcLftMrgn{
         margin-left: 6px;

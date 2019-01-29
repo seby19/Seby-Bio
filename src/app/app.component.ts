@@ -77,6 +77,9 @@ export class AppComponent implements OnInit{
   pagey = 0;
   pageEventDone = false;
   timer = null
+  shadowShow = false
+  shadowShow2 = false
+  shadowShow3 = false
   // smallerScreen : boolean = false;
   ngOnInit() {
     // if(window.innerWidth < 700) {
@@ -92,6 +95,16 @@ export class AppComponent implements OnInit{
     this.pageEventDone = false;
     this.timer = setInterval(this.setTime, 90);
     // window.onresize = this.resizedWindow;
+  }
+  shadow(num){
+    if (num ==1)
+    {
+      this.shadowShow = !this.shadowShow;
+    } else if (num ==2) {
+      this.shadowShow2 = !this.shadowShow2
+    } else {
+      this.shadowShow3 = !this.shadowShow3
+    }
   }
   // resizedWindow(){
   //   if(window.innerWidth < 700) {
@@ -239,7 +252,7 @@ export class AppComponent implements OnInit{
     // console.log(bounding3.top + "bounding3")
     // console.log(bounding4.top + "bounding4")
     
-    console.log(window.getComputedStyle(b).getPropertyValue("opacity") + " 2pacity")
+    // console.log(window.getComputedStyle(b).getPropertyValue("opacity") + " 2pacity")
 
 
     if (bounding1.top < 0 && bounding2.top < 0 && bounding3.top <= 0 && bounding4.top <=  window.innerHeight / 2 ) {
@@ -274,8 +287,8 @@ export class AppComponent implements OnInit{
       clearInterval(this.timer);
       this.pageEventDone = true;
       //  this.menuNumOld = 2
-      console.log("in 2")
-      console.log(window.getComputedStyle(b).getPropertyValue("opacity"))
+      // console.log("in 2")
+      // console.log(window.getComputedStyle(b).getPropertyValue("opacity"))
       if(window.getComputedStyle(b).getPropertyValue("opacity") != '1')
       {
         this.setMenuNum(2);

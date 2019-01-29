@@ -24,6 +24,47 @@
   </div>
 </nav>
 
+<nav  *ngIf = !hidingFunc2() class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadowBox">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+  <a class="navbar-brand" href="#" (click) = "setMenuNum(1)"><span class="heading">Seby Xavier</span></a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <div class="navbar-nav float-right text-right pr-3">
+
+      <ul class="nav-item alignTop pb-0 mb-0" (click) = "setMenuNum(1)">
+          <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNumNew == 1"  [class.menu] = "!(menuNumNew == 1)" >Professional summary</span></a>
+          <div *ngIf = "menuNumNew == 1" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146)" ></div>
+      </ul>
+      <ul class="nav-item alignTop pb-0 mb-0" (click) = "setMenuNum(2)">
+          <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNumNew == 2"  [class.menu] = "!(menuNumNew == 2)">Projects</span></a>
+          <div *ngIf = "menuNumNew == 2" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146)" ></div>
+      </ul>
+      <ul class="nav-item alignTop pb-0 mb-0" (click) = "setMenuNum(3)">
+          <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNumNew == 3"  [class.menu] = "!(menuNumNew == 3)">Education</span></a>
+          <div *ngIf = "menuNumNew == 3" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146)" ></div>
+      </ul>
+      <ul class="nav-item alignTop pb-0 mb-0" (click) = "setMenuNum(4)">
+          <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNumNew == 4"  [class.menu] = "!(menuNumNew == 4)">About me </span></a>
+          <div *ngIf = "menuNumNew == 4" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146)" ></div>
+      </ul>
+      <ul class="nav-item alignTop pb-0 mb-0" (click) = "setMenuNum(5)">
+          <a class="nav-link" style="cursor: pointer;"><span [class.menuHighlighted] = "menuNumNew == 5"  [class.menu] = "!(menuNumNew == 5)">Contact</span></a>
+          <div *ngIf = "menuNumNew == 5" class = "rounded pb-0 mb-0" style="height: 2px; background-color: rgb(17, 226, 146);" ></div>
+      </ul>
+
+      <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Features</a>
+      <a class="nav-item nav-link" href="#">Pricing</a>
+      <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
+    </div>
+  </div>
+</nav>
+
+
+
+
 <div [class.container] = !hidingFunc() >
   <div class="contentDiv"style="height: 1000px;" >
     <div class="container">
@@ -156,9 +197,9 @@
     <div [@changeMenuNum3] ="menuNumNew" id="Education" class="opacityAnimate">
       <div class="row">
         <div class="col-lg-4 col-md-3">
-          <div class="card engCard">
+          <div class="card engCard " (mouseenter) = "shadow(1)" (mouseleave) = "shadow(1)" [class.shadowBox2] = "shadowShow">
             <img class="card-img-top engineering" src="./assets/engineering.png" alt="Card image">
-            <div class="card-body">
+            <div class="card-body ">
               <span class="card-title eduTitles">Bachelor of Engineering</span>
               <p class="card-text eduText">M.V.G.R. College Of Engineering J.N.T.U, Kakinada 
                   <br>Bachelor of Information Technology 
@@ -168,7 +209,7 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-3">
-          <div class="card interCard">
+          <div class="card interCard shadowBox2" (mouseenter) = "shadow(2)" (mouseleave) = "shadow(2)" [class.shadowBox2] = "shadowShow2">
             <img class="card-img-top intermediate" src="./assets/intermediate2.png" alt="Card image">
             <div class="card-body">
               <span class="card-title eduTitles">Intermediate Education</span>
@@ -180,7 +221,7 @@
           </div>
           </div>
           <div class="col-lg-4 col-md-3">
-            <div class="card schoolCard" >
+            <div class="card schoolCard shadowBox2" (mouseenter) = "shadow(3)" (mouseleave) = "shadow(3)" [class.shadowBox2] = "shadowShow3">
               <img class="card-img-top school" src="./assets/school.png" alt="Card image">
               <div class="card-body">
                 <span class="card-title eduTitles">Schooling</span>
@@ -213,8 +254,7 @@
             With this mind set I have managed to learn music theory and the guitar, and various other computer technologies.
       <br>
       <div class="bullet" style="float: left;"></div>
-            Started working in Tata counsultancy services from August 2016 till date.
-      <br>
+          Date of Birth : 19 July,1995. Started working in Tata counsultancy services from August 2016 till date.
     </div>
     <div id="scrollToContact" class="menuDivSpacing"></div>
     <div [@changeMenuNum5] ="menuNumNew" id="Contact" class="row opacityAnimate container contactDtls" >
