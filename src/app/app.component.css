@@ -529,6 +529,7 @@
 
     .cntcLftMrgn{
         margin-left: 6px;
+        display: block;
     }
 
     .opacityAnimate{

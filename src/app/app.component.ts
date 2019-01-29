@@ -90,7 +90,7 @@ export class AppComponent implements OnInit{
     this.menuNumNew = 1;
     this.pagey = 0;
     this.pageEventDone = false;
-    this.timer = setInterval(this.setTime, 60);
+    this.timer = setInterval(this.setTime, 90);
     // window.onresize = this.resizedWindow;
   }
   // resizedWindow(){
@@ -127,7 +127,19 @@ export class AppComponent implements OnInit{
     //console.log(this.totalSeconds);
     if(this.totalSeconds == 1) {
       this.pageEventDone = false
-      console.log("set to false");
+      // console.log("set to false");
+      let a = document.getElementById('Professional');
+      let b = document.getElementById('Projects');
+      let c = document.getElementById('Education');
+      let d = document.getElementById('About');
+      let e = document.getElementById('Contact');
+      // console.log("a is " + a);
+      // this.inViewPort(a , 1 , event);
+      // this.inViewPort(b , 2 , event);
+      // this.inViewPort(c , 3 , event);
+      // this.inViewPort(d , 4 , event);
+      // this.inViewPort(e , 5 , event);
+      this.checkRelativePosition();
     }
   }
   setMenuNum(number) {
@@ -151,17 +163,8 @@ export class AppComponent implements OnInit{
   }
   
 	@HostListener('window:scroll', ['$event']) onScrollEvent(event){
-    // let a = document.getElementById('Prof');
-    // let b = document.getElementById('Projects');
-    // let c = document.getElementById('Education');
-    // let d = document.getElementById('About');
-    // let e = document.getElementById('Contact');
-    // this.inViewPort(a , 1 , event);
-    // this.inViewPort(b , 2 , event);
-    // this.inViewPort(c , 3 , event);
-    // this.inViewPort(d , 4 , event);
-    // this.inViewPort(e , 5 , event);
-    //console.log(Browser.CHROME)
+    
+    // console.log(Browser.CHROME)
     this.totalSeconds = 0;
     clearInterval(this.timer);
     // console.log("this.menuNumOld " + this.menuNumOld)
@@ -188,31 +191,13 @@ export class AppComponent implements OnInit{
       this.menuNumOld = this.menuNumNew;
     }
     this.pageEventDone = true;
-    this.timer = setInterval(this.setTime, 60);
+    this.timer = setInterval(this.setTime, 90);
 
   } 
   inViewPort(elem , menuNum , event) {
-    //var bounding = elem.getBoundingClientRect();
+    var bounding = elem.getBoundingClientRect();
     //console.log(event);
     //console.log(event.pageY);
-    this.totalSeconds = 0;
-    clearInterval(this.timer);
-    if(this.menuNumOld == this.menuNumNew)
-    {
-      if( event.pageY > this.pagey && this.menuNumOld < 5 && !this.pageEventDone )
-      {
-        this.setMenuNum(this.menuNumOld + 1);
-      }
-      else if (event.pageY < this.pagey && this.menuNumOld > 1 && !this.pageEventDone)
-      {
-        this.setMenuNum(this.menuNumOld - 1);
-      }
-      this.pagey = event.pageY;
-    } else {
-      this.menuNumOld = this.menuNumNew;
-    }
-    this.pageEventDone = true;
-    this.timer = setInterval(this.setTime, 90);
     // console.log( " bounding.top " + bounding.top);
     // console.log( " bounding.left " + bounding.left);
     // console.log( " bounding.bottom " + bounding.bottom);
@@ -221,17 +206,79 @@ export class AppComponent implements OnInit{
     // console.log( " window.innerWidth " + window.innerWidth);
     // console.log( " document.documentElement.clientHeight " + document.documentElement.clientHeight);
     // console.log( " document.documentElement.clientWidth " + document.documentElement.clientWidth);
-    // if (
-    //     bounding.top >= 0 &&
-    //     bounding.left >= 0 &&
-    //     bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    //     bounding.right <= (window.innerWidth || document.documentElement.clientWidth) 
-    //   ) {
-    //     elem.style.opacity = "1"
-    // }
-    // else {
-    //   elem.style.opacity = "0"
-    // }
+    if (
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth) 
+      ) {
+        elem.style.opacity = "1"
+    }
+    else {
+      elem.style.opacity = "0"
+    }
+  }
+
+  checkRelativePosition() {
+    let a = document.getElementById('Professional');
+    let b = document.getElementById('Projects');
+    let c = document.getElementById('Education');
+    let d = document.getElementById('About');
+    let e = document.getElementById('Contact');
+    let sToProj = document.getElementById('scrollToProjects');
+    let sToEdu = document.getElementById('scrollToEducation');
+    let sToAbou = document.getElementById('scrollToAbout');
+    let sToCnt = document.getElementById('scrollToContact');
+    var bounding1 = sToProj.getBoundingClientRect();
+    var bounding2 = sToEdu.getBoundingClientRect();
+    var bounding3 = sToAbou.getBoundingClientRect();
+    var bounding4 = sToCnt.getBoundingClientRect();
+    // console.log(window.getComputedStyle(a).getPropertyValue("opacity") + " op")
+
+    // console.log(bounding1.top + "bounding1")
+    // console.log(bounding2.top + "bounding2")
+    // console.log(bounding3.top + "bounding3")
+    // console.log(bounding4.top + "bounding4")
+    
+    
+
+
+    if (bounding1.top < 0 && bounding2.top < 0 && bounding3.top <= 0 && bounding4.top <=  window.innerHeight / 2 ) {
+      this.pageEventDone = true;
+      //  this.menuNumOld = 5
+      this.setMenuNum(5);
+      this.timer = setInterval(this.setTime, 90);
+    } else if(bounding1.top < 0 && bounding2.top < 0 && bounding3.top <= window.innerHeight / 2 && bounding4.top > 0 ) {
+      clearInterval(this.timer);
+      this.pageEventDone = true;
+      //  this.menuNumOld = 4
+      this.setMenuNum(4);
+      this.timer = setInterval(this.setTime, 90);
+    }
+    else if(bounding1.top <0 && bounding2.top <= window.innerHeight / 2 && bounding3.top > 0 && bounding4.top >= 0) {
+      clearInterval(this.timer);
+      this.pageEventDone = true;
+      //  this.menuNumOld = 3
+      this.setMenuNum(3);
+      this.timer = setInterval(this.setTime, 90);
+    }
+    else if(bounding1.top <=window.innerHeight / 2  && bounding2.top > 0 && bounding3.top >= 0 && bounding4.top >= 0) {
+      clearInterval(this.timer);
+      this.pageEventDone = true;
+      //  this.menuNumOld = 2
+      this.setMenuNum(2);
+      this.timer = setInterval(this.setTime, 90);
+    }
+    else if(bounding1.top > 0  && bounding2.top >= 0 && bounding3.top >= 0 && bounding4.top >= 0) {
+      clearInterval(this.timer);
+      this.pageEventDone = true;
+      //  this.menuNumOld = 1
+      this.setMenuNum(1);
+      // console.log("In set 1")
+      this.timer = setInterval(this.setTime, 90);
+    } 
+     
+
   }
 	
 }
