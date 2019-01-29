@@ -1,9 +1,9 @@
 .heading{
-    color: #4e5052;
+    color: #6a6e70;
     font-size: 60px;
 }
 .menu{
-    color: #484b4d;
+    color: #6a6e70;
     font-size: 17px;
 }
 .menuHighlighted{
@@ -14,11 +14,11 @@
     margin-top: 43px
 }
 .menu:hover{
-    color: rgb(0, 0, 0);
+    color: rgb(39, 38, 38);
     font-size: 17px;
 }
 .contentDiv{
-    color: #3c3e3f;
+    color: #6a6e70;
     margin-top: 200px;
 }
 
@@ -147,8 +147,8 @@
         background-size: 40px;
         background-position: center;
         background-repeat: no-repeat;
-        height: 40px;
-        width: 40px;
+        height: 28px;
+        width: 28px;
     }
 
         
