@@ -553,7 +553,7 @@
 
     .Doodle{
         background-image: url('../assets/classifer.svg');
-        background-size: 100px;
+        background-size: 60px;
         background-position: center;
         background-repeat: no-repeat;
         height: 100%;
@@ -769,7 +769,7 @@
 
     .Doodle{
         background-image: url('../assets/classifer.svg');
-        background-size: 80px;
+        background-size: 60px;
         background-position: center;
         background-repeat: no-repeat;
         height: 100%;
