@@ -119,7 +119,21 @@
         background-repeat: no-repeat;
         height: 100%;
     }
+    .Doodle{
+        background-image: url('../assets/classifer.svg');
+        background-size: 270px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
 
+    .colorPred{
+        background-image: url('../assets/predictor1.png');
+        background-size: 270px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
 
     .projectCards{    
         background-color: rgb(3, 141, 196);
@@ -315,6 +329,21 @@
 
     .neuralNet{
         background-image: url('../assets/neural-network2.png');
+        background-size: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+    .Doodle{
+        background-image: url('../assets/classifer.svg');
+        background-size: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    .colorPred{
+        background-image: url('../assets/predictor1.png');
         background-size: 150px;
         background-position: center;
         background-repeat: no-repeat;
@@ -522,6 +551,21 @@
         height: 100%;
     }
 
+    .Doodle{
+        background-image: url('../assets/classifer.svg');
+        background-size: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    .colorPred{
+        background-image: url('../assets/predictor1.png');
+        background-size: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
 
     .projectCards{    
         background-color: rgb(3, 141, 196);
@@ -717,6 +761,22 @@
 
     .neuralNet{
         background-image: url('../assets/neural-network2.png');
+        background-size: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    .Doodle{
+        background-image: url('../assets/classifer.svg');
+        background-size: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    .colorPred{
+        background-image: url('../assets/predictor1.png');
         background-size: 100px;
         background-position: center;
         background-repeat: no-repeat;
