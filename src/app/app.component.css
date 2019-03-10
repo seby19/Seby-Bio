@@ -769,8 +769,7 @@
 
     .Doodle{
         background-image: url('../assets/classifer.svg');
-        background-size: 100px;
-        margin-top: 20px;
+        background-size: 80px;
         background-position: center;
         background-repeat: no-repeat;
         height: 100%;
