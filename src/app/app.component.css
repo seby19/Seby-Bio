@@ -112,6 +112,15 @@
         height: 100%;
     }
 
+    .neuralNet{
+        background-image: url('../assets/neural-network2.png');
+        background-size: 300px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+
     .projectCards{    
         background-color: rgb(3, 141, 196);
         height: 500px;
@@ -298,6 +307,14 @@
         
     .remember{
         background-image: url('../assets/remember3.png');
+        background-size: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    .neuralNet{
+        background-image: url('../assets/neural-network2.png');
         background-size: 150px;
         background-position: center;
         background-repeat: no-repeat;
@@ -497,6 +514,15 @@
         height: 100%;
     }
 
+    .neuralNet{
+        background-image: url('../assets/neural-network2.png');
+        background-size: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+
     .projectCards{    
         background-color: rgb(3, 141, 196);
         height: 500px;
@@ -683,6 +709,14 @@
         
     .remember{
         background-image: url('../assets/remember3.png');
+        background-size: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    .neuralNet{
+        background-image: url('../assets/neural-network2.png');
         background-size: 100px;
         background-position: center;
         background-repeat: no-repeat;
